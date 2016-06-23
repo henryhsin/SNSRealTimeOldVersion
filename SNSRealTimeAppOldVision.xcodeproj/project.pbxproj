@@ -7,21 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82086F091D1C7BC20032C25C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82086F081D1C7BC20032C25C /* DataService.swift */; };
 		82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230551D1C05460009C9C0 /* AppDelegate.swift */; };
-		82D230581D1C05460009C9C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230571D1C05460009C9C0 /* ViewController.swift */; };
-		82D2305B1D1C05460009C9C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D230591D1C05460009C9C0 /* Main.storyboard */; };
 		82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305C1D1C05460009C9C0 /* Assets.xcassets */; };
 		82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */; };
+		82D230681D1C05700009C9C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230671D1C05700009C9C0 /* LoginViewController.swift */; };
+		82D2306A1D1C05800009C9C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D230691D1C05800009C9C0 /* Main.storyboard */; };
+		82D2306E1D1C07220009C9C0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 82D2306D1D1C07220009C9C0 /* Podfile */; };
+		82D230781D1C23770009C9C0 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D230741D1C23770009C9C0 /* NotoSans-Bold.ttf */; };
+		82D230791D1C23770009C9C0 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D230751D1C23770009C9C0 /* NotoSans-BoldItalic.ttf */; };
+		82D2307A1D1C23770009C9C0 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D230761D1C23770009C9C0 /* NotoSans-Italic.ttf */; };
+		82D2307B1D1C23770009C9C0 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D230771D1C23770009C9C0 /* NotoSans-Regular.ttf */; };
+		82D230801D1C28BA0009C9C0 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D2307F1D1C28BA0009C9C0 /* MaterialView.swift */; };
+		82D230831D1C29720009C9C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230821D1C29720009C9C0 /* Constants.swift */; };
+		82D230851D1C30EA0009C9C0 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230841D1C30EA0009C9C0 /* MaterialButton.swift */; };
+		82D230871D1C3C930009C9C0 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230861D1C3C930009C9C0 /* MaterialTextField.swift */; };
+		82D230891D1C5B3E0009C9C0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */; };
+		82D2308B1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */; };
+		82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308C1D1C5B540009C9C0 /* Bolts.framework */; };
+		AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNSRealTimeAppOldVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82086F081D1C7BC20032C25C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		82D230521D1C05460009C9C0 /* SNSRealTimeAppOldVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSRealTimeAppOldVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D230551D1C05460009C9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82D230571D1C05460009C9C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82D2305A1D1C05460009C9C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82D2305C1D1C05460009C9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D2305F1D1C05460009C9C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D230611D1C05460009C9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D230671D1C05700009C9C0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		82D230691D1C05800009C9C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		82D2306D1D1C07220009C9C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		82D2306F1D1C0E480009C9C0 /* SNSRealTimeAppOldVision-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNSRealTimeAppOldVision-Bridging-Header.h"; sourceTree = "<group>"; };
+		82D230741D1C23770009C9C0 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		82D230751D1C23770009C9C0 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		82D230761D1C23770009C9C0 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		82D230771D1C23770009C9C0 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		82D2307F1D1C28BA0009C9C0 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		82D230821D1C29720009C9C0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82D230841D1C30EA0009C9C0 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		82D230861D1C3C930009C9C0 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		82D2308C1D1C5B540009C9C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
+		D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +60,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */,
+				82D230891D1C5B3E0009C9C0 /* FBSDKCoreKit.framework in Frameworks */,
+				82D2308B1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework in Frameworks */,
+				82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B5CA8ADE99955F03DAF86C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */,
+				82D2308C1D1C5B540009C9C0 /* Bolts.framework */,
+				82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */,
+				82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82086F071D1C7B880032C25C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82086F081D1C7BC20032C25C /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		82D230491D1C05460009C9C0 = {
 			isa = PBXGroup;
 			children = (
+				82D2306D1D1C07220009C9C0 /* Podfile */,
 				82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */,
 				82D230531D1C05460009C9C0 /* Products */,
+				A38D59A780E766A286DE1BCE /* Pods */,
+				1B5CA8ADE99955F03DAF86C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +111,57 @@
 		82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */ = {
 			isa = PBXGroup;
 			children = (
+				82D230671D1C05700009C9C0 /* LoginViewController.swift */,
+				82086F071D1C7B880032C25C /* Services */,
+				82D230811D1C295B0009C9C0 /* Utility */,
+				82D230731D1C235C0009C9C0 /* Resources */,
 				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
-				82D230571D1C05460009C9C0 /* ViewController.swift */,
-				82D230591D1C05460009C9C0 /* Main.storyboard */,
-				82D2305C1D1C05460009C9C0 /* Assets.xcassets */,
+				82D2307E1D1C28950009C9C0 /* View */,
+				82D230691D1C05800009C9C0 /* Main.storyboard */,
 				82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */,
 				82D230611D1C05460009C9C0 /* Info.plist */,
+				82D2306F1D1C0E480009C9C0 /* SNSRealTimeAppOldVision-Bridging-Header.h */,
 			);
 			path = SNSRealTimeAppOldVision;
+			sourceTree = "<group>";
+		};
+		82D230731D1C235C0009C9C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82D230741D1C23770009C9C0 /* NotoSans-Bold.ttf */,
+				82D230751D1C23770009C9C0 /* NotoSans-BoldItalic.ttf */,
+				82D230761D1C23770009C9C0 /* NotoSans-Italic.ttf */,
+				82D230771D1C23770009C9C0 /* NotoSans-Regular.ttf */,
+				82D2305C1D1C05460009C9C0 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		82D2307E1D1C28950009C9C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82D2307F1D1C28BA0009C9C0 /* MaterialView.swift */,
+				82D230841D1C30EA0009C9C0 /* MaterialButton.swift */,
+				82D230861D1C3C930009C9C0 /* MaterialTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		82D230811D1C295B0009C9C0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				82D230821D1C29720009C9C0 /* Constants.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A38D59A780E766A286DE1BCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */,
+				AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82D230641D1C05460009C9C0 /* Build configuration list for PBXNativeTarget "SNSRealTimeAppOldVision" */;
 			buildPhases = (
+				9C77C575A24EDC75707ED607 /* [CP] Check Pods Manifest.lock */,
 				82D2304E1D1C05460009C9C0 /* Sources */,
 				82D2304F1D1C05460009C9C0 /* Frameworks */,
 				82D230501D1C05460009C9C0 /* Resources */,
+				AFAD2A700FBC258F8255887E /* [CP] Embed Pods Frameworks */,
+				1E73BC5524D789046E8F94D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,35 +225,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D230791D1C23770009C9C0 /* NotoSans-BoldItalic.ttf in Resources */,
+				82D2306A1D1C05800009C9C0 /* Main.storyboard in Resources */,
 				82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */,
+				82D2306E1D1C07220009C9C0 /* Podfile in Resources */,
+				82D2307B1D1C23770009C9C0 /* NotoSans-Regular.ttf in Resources */,
+				82D2307A1D1C23770009C9C0 /* NotoSans-Italic.ttf in Resources */,
+				82D230781D1C23770009C9C0 /* NotoSans-Bold.ttf in Resources */,
 				82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */,
-				82D2305B1D1C05460009C9C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E73BC5524D789046E8F94D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C77C575A24EDC75707ED607 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFAD2A700FBC258F8255887E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82D2304E1D1C05460009C9C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D230581D1C05460009C9C0 /* ViewController.swift in Sources */,
+				82D230871D1C3C930009C9C0 /* MaterialTextField.swift in Sources */,
+				82086F091D1C7BC20032C25C /* DataService.swift in Sources */,
+				82D230801D1C28BA0009C9C0 /* MaterialView.swift in Sources */,
+				82D230681D1C05700009C9C0 /* LoginViewController.swift in Sources */,
 				82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */,
+				82D230831D1C29720009C9C0 /* Constants.swift in Sources */,
+				82D230851D1C30EA0009C9C0 /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		82D230591D1C05460009C9C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82D2305A1D1C05460009C9C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -247,23 +400,40 @@
 		};
 		82D230651D1C05460009C9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SNSRealTimeAppOldVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coolApp.SNSRealTimeAppOldVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SNSRealTimeAppOldVision/SNSRealTimeAppOldVision-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		82D230661D1C05460009C9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SNSRealTimeAppOldVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coolApp.SNSRealTimeAppOldVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SNSRealTimeAppOldVision/SNSRealTimeAppOldVision-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +456,7 @@
 				82D230661D1C05460009C9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

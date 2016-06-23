@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+// used by thr layer shadow
+let SHADOW_COLOR: CGFloat = 157.0/255.0
+
+//uid
+let KEY_UID = "uid"
