@@ -12,5 +12,18 @@ import UIKit
 // used by thr layer shadow
 let SHADOW_COLOR: CGFloat = 157.0/255.0
 
-//uid
+//Key
 let KEY_UID = "uid"
+
+//Segue
+let SEGUE_LOGGED_IN = "loggedIn"
+
+//Alert Title
+let ALERT_TITLE_OKAY = "okay"
+let ALERT_TITLE_OOPS = "OOps!!"
+
+//Status Codes 有關Firebase中所給的錯誤代碼
+//使用者不存在的錯誤代碼為-8
+let STATUS_ACCOUNT_NONEXIST = -8
+
+let STATUS_PASSWORD_WRONG = -6
