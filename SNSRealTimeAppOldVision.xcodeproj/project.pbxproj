@@ -25,6 +25,8 @@
 		82D230891D1C5B3E0009C9C0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */; };
 		82D2308B1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */; };
 		82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308C1D1C5B540009C9C0 /* Bolts.framework */; };
+		82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855D1D1D372600BBF28D /* FeedViewController.swift */; };
+		82D485601D1D38AC00BBF28D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855F1D1D38AC00BBF28D /* PostCell.swift */; };
 		AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		82D2308C1D1C5B540009C9C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		82D4855D1D1D372600BBF28D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		82D4855F1D1D38AC00BBF28D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
 		D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,12 +115,12 @@
 		82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */ = {
 			isa = PBXGroup;
 			children = (
-				82D230671D1C05700009C9C0 /* LoginViewController.swift */,
+				82D4855C1D1D36DD00BBF28D /* Controller */,
 				82086F071D1C7B880032C25C /* Services */,
 				82D230811D1C295B0009C9C0 /* Utility */,
 				82D230731D1C235C0009C9C0 /* Resources */,
 				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
-				82D2307E1D1C28950009C9C0 /* View */,
+				82D2307E1D1C28950009C9C0 /* View Material */,
 				82D230691D1C05800009C9C0 /* Main.storyboard */,
 				82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */,
 				82D230611D1C05460009C9C0 /* Info.plist */,
@@ -128,23 +132,21 @@
 		82D230731D1C235C0009C9C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				82D230741D1C23770009C9C0 /* NotoSans-Bold.ttf */,
-				82D230751D1C23770009C9C0 /* NotoSans-BoldItalic.ttf */,
-				82D230761D1C23770009C9C0 /* NotoSans-Italic.ttf */,
-				82D230771D1C23770009C9C0 /* NotoSans-Regular.ttf */,
+				82D4855B1D1D251C00BBF28D /* Custom Font */,
 				82D2305C1D1C05460009C9C0 /* Assets.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		82D2307E1D1C28950009C9C0 /* View */ = {
+		82D2307E1D1C28950009C9C0 /* View Material */ = {
 			isa = PBXGroup;
 			children = (
 				82D2307F1D1C28BA0009C9C0 /* MaterialView.swift */,
 				82D230841D1C30EA0009C9C0 /* MaterialButton.swift */,
 				82D230861D1C3C930009C9C0 /* MaterialTextField.swift */,
+				82D4855F1D1D38AC00BBF28D /* PostCell.swift */,
 			);
-			name = View;
+			name = "View Material";
 			sourceTree = "<group>";
 		};
 		82D230811D1C295B0009C9C0 /* Utility */ = {
@@ -153,6 +155,26 @@
 				82D230821D1C29720009C9C0 /* Constants.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		82D4855B1D1D251C00BBF28D /* Custom Font */ = {
+			isa = PBXGroup;
+			children = (
+				82D230741D1C23770009C9C0 /* NotoSans-Bold.ttf */,
+				82D230751D1C23770009C9C0 /* NotoSans-BoldItalic.ttf */,
+				82D230761D1C23770009C9C0 /* NotoSans-Italic.ttf */,
+				82D230771D1C23770009C9C0 /* NotoSans-Regular.ttf */,
+			);
+			name = "Custom Font";
+			sourceTree = "<group>";
+		};
+		82D4855C1D1D36DD00BBF28D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82D230671D1C05700009C9C0 /* LoginViewController.swift */,
+				82D4855D1D1D372600BBF28D /* FeedViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		A38D59A780E766A286DE1BCE /* Pods */ = {
@@ -296,7 +318,9 @@
 				82D230801D1C28BA0009C9C0 /* MaterialView.swift in Sources */,
 				82D230681D1C05700009C9C0 /* LoginViewController.swift in Sources */,
 				82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */,
+				82D485601D1D38AC00BBF28D /* PostCell.swift in Sources */,
 				82D230831D1C29720009C9C0 /* Constants.swift in Sources */,
+				82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */,
 				82D230851D1C30EA0009C9C0 /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
