@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     
     
     
-    //Email Logged IN
+    //MARK: Email Logged IN
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -51,8 +51,16 @@ class LoginViewController: UIViewController {
                             if error != nil{
                                 self.showAlertMessage(ALERT_TITLE_OOPS, message: "Problem creating account\(error)")
                             }else{
+                                
+                                
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
-                                DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: nil)
+                                DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: {(error, authData) in
+                                    let user = ["provider": authData.provider!, "userName":"Henry"]
+                                    DataService.ds.createFirebaseUser(authData.uid!, user: user)
+                                })
+                                
+                                
+                                
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                         })
@@ -99,9 +107,11 @@ class LoginViewController: UIViewController {
                     if error != nil{
                         self.showAlertMessage(ALERT_TITLE_OOPS, message: "Login Failed \(error)")
                     }else{
-                        //出現alert視窗後，似乎就無法執行performSegueWithIdentifier
                         
-                        //所以把self.performSegueWithIdentifier("loggedIn", sender: nil)寫到okAction的handler中
+                        //在這邊新增userID,username,provider到firebase中
+                        //其中username,provider皆為userID的children
+                        let user = ["provider": authData.provider!, "userName":"Henry"]
+                        DataService.ds.createFirebaseUser(authData.uid!, user: user)
                         
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                         self.FBShowAlert("Successful", message: "Login FB \(authData)")

@@ -68,7 +68,7 @@
                                                     <constraint firstAttribute="height" constant="128" id="n0H-mi-fmz"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-5N-sIS" customClass="MaterialButton" customModule="SNSRealTimeAppOldVision" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-5N-sIS" customClass="MaterialButton" customModule="SNSRealTimeAppOldVision" customModuleProvider="target">
                                                 <rect key="frame" x="128" y="41" width="422" height="47"/>
                                                 <color key="backgroundColor" red="0.039215686274509803" green="0.062745098039215685" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="25"/>
@@ -192,22 +192,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="302" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o0H-o9-ds9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="402" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o0H-o9-ds9">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="302" id="KHk-AH-ADC" customClass="PostCell" customModule="SNSRealTimeAppOldVision" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="302"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="402" id="KHk-AH-ADC" customClass="PostCell" customModule="SNSRealTimeAppOldVision" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="402"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHk-AH-ADC" id="f4S-Ev-Mpr">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="302"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="402"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-Ho-daQ" userLabel="container" customClass="MaterialView" customModule="SNSRealTimeAppOldVision" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="7" width="560" height="286"/>
+                                                    <rect key="frame" x="0.0" y="7" width="560" height="387"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-vR-Z94">
-                                                            <rect key="frame" x="-3" y="-6" width="544" height="270"/>
+                                                            <rect key="frame" x="-3" y="-6" width="544" height="370"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-M8-jR4">
                                                                     <rect key="frame" x="0.0" y="0.0" width="544" height="66"/>
@@ -282,10 +282,10 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-O7-5QP">
-                                                                    <rect key="frame" x="0.0" y="71" width="544" height="11"/>
+                                                                    <rect key="frame" x="0.0" y="71" width="544" height="16"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="HfW-HA-IVd"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="HfW-HA-IVd"/>
                                                                     </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -294,7 +294,7 @@
                                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                                 </textView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DeadPool" translatesAutoresizingMaskIntoConstraints="NO" id="YHk-mF-pzs">
-                                                                    <rect key="frame" x="0.0" y="87" width="544" height="183"/>
+                                                                    <rect key="frame" x="0.0" y="92" width="544" height="279"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>

@@ -15,6 +15,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //everytime Firebase have changed, we can use this func to grab the changes
+        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock:  { (snapshot) in
+            print(snapshot.value)
+            self.tableView.reloadData()
+        })
     }
     
     //MARK: TableView
