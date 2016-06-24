@@ -67,6 +67,16 @@ class LoginViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func FBShowAlert(title: String!, message: String!){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let okAction = UIAlertAction(title: "Okay", style: .Default) { (UIAlertAction) in
+            self.performSegueWithIdentifier("loggedIn", sender: nil)
+        }
+        
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
     func checkFieldTextIsEmpty() -> Bool{
         if (((emailTextField.text?.isEmpty)!) || ((passwordTextField.text?.isEmpty)!)){
             self.showAlertMessage("OOps", message: "Please check the textField!!")
@@ -100,12 +110,13 @@ class LoginViewController: UIViewController {
                     if error != nil{
                         self.showAlertMessage("OOps", message: "Login Failed \(error)")
                     }else{
-                        self.performSegueWithIdentifier("loggedIn", sender: nil)
-                        self.showAlertMessage("Good!!",message: "Logged in \(authData)")
+                        //出現alert視窗後，似乎就無法執行performSegueWithIdentifier
+                        
+                        //所以把self.performSegueWithIdentifier("loggedIn", sender: nil)寫到okAction的handler中
+                        
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                        //bug
-                        self.performSegueWithIdentifier("loggedIn", sender: nil)
-                        print("SS")
+                        self.FBShowAlert("Successful", message: "Login FB \(authData)")
+                       
                     }
                 })
             }
