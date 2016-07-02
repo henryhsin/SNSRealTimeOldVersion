@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82086F091D1C7BC20032C25C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82086F081D1C7BC20032C25C /* DataService.swift */; };
+		820F52191D275A04004667EA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F52181D275A04004667EA /* Post.swift */; };
 		82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230551D1C05460009C9C0 /* AppDelegate.swift */; };
 		82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305C1D1C05460009C9C0 /* Assets.xcassets */; };
 		82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */; };
@@ -27,12 +28,12 @@
 		82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308C1D1C5B540009C9C0 /* Bolts.framework */; };
 		82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855D1D1D372600BBF28D /* FeedViewController.swift */; };
 		82D485601D1D38AC00BBF28D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855F1D1D38AC00BBF28D /* PostCell.swift */; };
-		AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */; };
+		EE84CEC2974587BA32FA3427 /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FF429CFB5149BCCF0E04BD /* Pods_SNSRealTimeAppOldVision.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNSRealTimeAppOldVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82086F081D1C7BC20032C25C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		820F52181D275A04004667EA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		82D230521D1C05460009C9C0 /* SNSRealTimeAppOldVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSRealTimeAppOldVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D230551D1C05460009C9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D2305C1D1C05460009C9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		82D2308C1D1C5B540009C9C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		82D4855D1D1D372600BBF28D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		82D4855F1D1D38AC00BBF28D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		98FF429CFB5149BCCF0E04BD /* Pods_SNSRealTimeAppOldVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNSRealTimeAppOldVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
 		D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */,
 				82D230891D1C5B3E0009C9C0 /* FBSDKCoreKit.framework in Frameworks */,
 				82D2308B1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework in Frameworks */,
 				82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */,
+				EE84CEC2974587BA32FA3427 /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +79,10 @@
 		1B5CA8ADE99955F03DAF86C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */,
 				82D2308C1D1C5B540009C9C0 /* Bolts.framework */,
 				82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */,
 				82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */,
+				98FF429CFB5149BCCF0E04BD /* Pods_SNSRealTimeAppOldVision.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +93,14 @@
 				82086F081D1C7BC20032C25C /* DataService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		820F52171D2759EB004667EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				820F52181D275A04004667EA /* Post.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		82D230491D1C05460009C9C0 = {
@@ -115,13 +125,14 @@
 		82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */ = {
 			isa = PBXGroup;
 			children = (
+				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
 				82D4855C1D1D36DD00BBF28D /* Controller */,
 				82086F071D1C7B880032C25C /* Services */,
 				82D230811D1C295B0009C9C0 /* Utility */,
 				82D230731D1C235C0009C9C0 /* Resources */,
-				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
 				82D2307E1D1C28950009C9C0 /* View Material */,
 				82D230691D1C05800009C9C0 /* Main.storyboard */,
+				820F52171D2759EB004667EA /* Model */,
 				82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */,
 				82D230611D1C05460009C9C0 /* Info.plist */,
 				82D2306F1D1C0E480009C9C0 /* SNSRealTimeAppOldVision-Bridging-Header.h */,
@@ -322,6 +333,7 @@
 				82D230831D1C29720009C9C0 /* Constants.swift in Sources */,
 				82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */,
 				82D230851D1C30EA0009C9C0 /* MaterialButton.swift in Sources */,
+				820F52191D275A04004667EA /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

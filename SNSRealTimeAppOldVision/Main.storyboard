@@ -219,7 +219,7 @@
                                                                                 <constraint firstAttribute="width" constant="64" id="gtk-mG-n8r"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeeHonHsin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-Ml-5Gp">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LeeHonHsin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-Ml-5Gp">
                                                                             <rect key="frame" x="64" y="21" width="298" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="f1o-ps-aG0"/>
@@ -228,7 +228,7 @@
                                                                             <color key="textColor" red="0.99215686270000003" green="0.41960784309999999" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearts0" translatesAutoresizingMaskIntoConstraints="NO" id="MQl-UR-5G8">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hearts0" translatesAutoresizingMaskIntoConstraints="NO" id="MQl-UR-5G8">
                                                                             <rect key="frame" x="362" y="6" width="52" height="54"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="52" id="dQo-6K-JWO"/>
@@ -251,7 +251,7 @@
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hate0" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-29-H1e">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hate0" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-29-H1e">
                                                                             <rect key="frame" x="453" y="7" width="50" height="52"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="50" id="rzd-WR-adF"/>
@@ -282,7 +282,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-O7-5QP">
-                                                                    <rect key="frame" x="0.0" y="71" width="544" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="71" width="544" height="11"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="HfW-HA-IVd"/>
@@ -293,8 +293,8 @@
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                                 </textView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DeadPool" translatesAutoresizingMaskIntoConstraints="NO" id="YHk-mF-pzs">
-                                                                    <rect key="frame" x="0.0" y="92" width="544" height="279"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="deadPool" translatesAutoresizingMaskIntoConstraints="NO" id="YHk-mF-pzs">
+                                                                    <rect key="frame" x="0.0" y="87" width="544" height="284"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -367,9 +367,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DeadPool" width="1920" height="1080"/>
         <image name="FBLogo" width="256" height="256"/>
         <image name="Hsin" width="644" height="908"/>
+        <image name="deadPool" width="2048" height="1601"/>
         <image name="hate0" width="50" height="50"/>
         <image name="hearts0" width="52" height="52"/>
     </resources>

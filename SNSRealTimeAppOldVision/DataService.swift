@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 let URL_BASE = "https://realtimeappoldvision.firebaseio.com"
 
@@ -30,6 +31,7 @@ class DataService {
     
     func createFirebaseUser(uid: String, user: Dictionary<String, String>){
         //等同於"https://realtimeappoldvision.firebaseio.com/users/uid"
+        //因為uid下會有provider和userName，所以我們用Dictionary的方式將這兩個value儲存進去
         //並設立provider: facebook or provider: email
         //並設立userName: name
         REF_USERS.childByAppendingPath(uid).setValue(user)
