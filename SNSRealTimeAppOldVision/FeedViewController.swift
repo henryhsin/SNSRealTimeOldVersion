@@ -21,6 +21,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        //因為有些cell無圖片，所以我們可以給cell一個預設的row height，讓他再有圖片時載入這個高度
+        //下面會再設沒有圖片時的高度
+        tableView.estimatedRowHeight = 402
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        
         //everytime Firebase have changed, we can use this func to grab the changes
         
         
@@ -63,17 +68,33 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //in cache, there has a dectionary. And the key is "url", and the value is the "img"
         //So we can check is the img existed in the cache
-        var img: UIImage?
-        if let url = post.imgUrl{
-           img = FeedViewController.imgCache.objectForKey(url) as? UIImage
-        }
+        
         
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell{
+            //it means every time we create a new cell, we want to cancel the request, because we can use the downloaded img in the cache, instead of downloading the old picture again
+            cell.request?.cancel()
+            
+            var img: UIImage?
+            if let url = post.imgUrl{
+                print(url)
+                img = FeedViewController.imgCache.objectForKey(url) as? UIImage
+                print(img)
+                print("QQ")
+            }
             cell.configureCell(post, img: img)
             return cell
         }else{
             return PostCell()
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row]
+        if let url = post.imgUrl{
+            return tableView.estimatedRowHeight
+        }else{
+            return 150
         }
     }
 }

@@ -41,10 +41,25 @@ class PostCell: UITableViewCell {
         self.hateLabel.text = String(post.hates)
         
         if let url = post.imgUrl{
-            if img != nil{//it means we have cache img
+            if img != nil{
+                //it means we have img in cacheImg
                 self.showCaseImg.image = img
-            }else{//download the img from firebase
-                request = Alamofire.request(.GET, post.imgUrl!).validate(contentType: ["image/*"])
+            }else{
+                //download the img from firebase
+                //contentType is Alamofire only have, it means it is an img
+                
+                //要記得因為apple還未預設開放連結到非https的網址，所以記得要去info.plist設定
+                request = Alamofire.request(.GET, url).validate(contentType: ["image/*"]).response(completionHandler: { (request, response, data, err) in
+                    if err != nil{
+                        print(err)
+                    }else{
+                        
+                        let img = UIImage(data: data!)!
+                        self.showCaseImg.image = img
+                        //將載下來的圖片，存到cache中
+                        FeedViewController.imgCache.setObject(img, forKey: self.post.imgUrl!)
+                    }
+                })
             }
         }else{
             self.showCaseImg.hidden = true
