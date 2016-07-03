@@ -12,6 +12,9 @@ import Firebase
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     var posts = [Post]()
+    //everytime we want to display the view from the firebase, we can check was the img downloaded before in the cache? If yes, we can grab the img from the cache instead of downloading again from the Firebase
+    static var imgCache = NSCache()
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +60,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let post = posts[indexPath.row]
-        print(post.description)
+        
+        //in cache, there has a dectionary. And the key is "url", and the value is the "img"
+        //So we can check is the img existed in the cache
+        var img: UIImage?
+        if let url = post.imgUrl{
+           img = FeedViewController.imgCache.objectForKey(url) as? UIImage
+        }
+        
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell{
-            cell.configureCell(post)
+            cell.configureCell(post, img: img)
             return cell
         }else{
             return PostCell()
