@@ -11,6 +11,10 @@ import UIKit
 class PostCell: UITableViewCell {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var showCaseImg: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var hateLabel: UILabel!
+    var post:Post!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +28,14 @@ class PostCell: UITableViewCell {
         profileImg.clipsToBounds = true
         showCaseImg.clipsToBounds = true
         
+    }
+    
+    
+    //Good develper configure the cell, like change cell's text, view, color here, not in FeedViewController's cell function
+    func configureCell(post: Post){
+        self.post = post
+        self.descriptionTextView.text = post.description
+        self.likeLabel.text = String(post.likes)
+        self.hateLabel.text = String(post.hates)
     }
 }
