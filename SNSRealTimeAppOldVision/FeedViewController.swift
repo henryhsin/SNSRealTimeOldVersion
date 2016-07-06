@@ -9,12 +9,20 @@
 import UIKit
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    var imgPicker: UIImagePickerController!
+    
     var posts = [Post]()
     //everytime we want to display the view from the firebase, we can check was the img downloaded before in the cache? If yes, we can grab the img from the cache instead of downloading again from the Firebase
     static var imgCache = NSCache()
     
+    @IBOutlet weak var cameraImg: UIImageView!
+    
+    @IBAction func postButton(sender: MaterialButton) {
+    }
+    
+    @IBOutlet weak var postField: MaterialTextField!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +59,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.tableView.reloadData()
         })
+        
+        
+        
+        
+        
+        
+        imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        
+        
+        
+        
+        
+        
     }
     
     //MARK: TableView
@@ -97,4 +119,40 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return 150
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imgPicker.dismissViewControllerAnimated(true, completion: nil)
+        cameraImg.image = image
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //MARK: Gesture
+    
+    @IBAction func selectImgFromCamera(sender: UITapGestureRecognizer) {
+        presentViewController(imgPicker, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
