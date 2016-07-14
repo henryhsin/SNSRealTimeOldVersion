@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1515427B728BE0155F0F7A5A /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C35C9624CED31D15798742C /* Pods_SNSRealTimeAppOldVision.framework */; };
 		82086F091D1C7BC20032C25C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82086F081D1C7BC20032C25C /* DataService.swift */; };
+		820F52191D275A04004667EA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F52181D275A04004667EA /* Post.swift */; };
 		82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230551D1C05460009C9C0 /* AppDelegate.swift */; };
 		82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305C1D1C05460009C9C0 /* Assets.xcassets */; };
 		82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 		3289AA09D974B82CA73CD1C2 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
 		412B6B2DCA395E290057402E /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 		82086F081D1C7BC20032C25C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		820F52181D275A04004667EA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		82D230521D1C05460009C9C0 /* SNSRealTimeAppOldVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSRealTimeAppOldVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D230551D1C05460009C9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D2305C1D1C05460009C9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		820F52171D2759EB004667EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				820F52181D275A04004667EA /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		82D230491D1C05460009C9C0 = {
 			isa = PBXGroup;
 			children = (
@@ -115,13 +125,14 @@
 		82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */ = {
 			isa = PBXGroup;
 			children = (
+				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
 				82D4855C1D1D36DD00BBF28D /* Controller */,
 				82086F071D1C7B880032C25C /* Services */,
 				82D230811D1C295B0009C9C0 /* Utility */,
 				82D230731D1C235C0009C9C0 /* Resources */,
-				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
 				82D2307E1D1C28950009C9C0 /* View Material */,
 				82D230691D1C05800009C9C0 /* Main.storyboard */,
+				820F52171D2759EB004667EA /* Model */,
 				82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */,
 				82D230611D1C05460009C9C0 /* Info.plist */,
 				82D2306F1D1C0E480009C9C0 /* SNSRealTimeAppOldVision-Bridging-Header.h */,
@@ -322,6 +333,7 @@
 				82D230831D1C29720009C9C0 /* Constants.swift in Sources */,
 				82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */,
 				82D230851D1C30EA0009C9C0 /* MaterialButton.swift in Sources */,
+				820F52191D275A04004667EA /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
