@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 let URL_BASE = "https://realtimeappoldvision.firebaseio.com"
 

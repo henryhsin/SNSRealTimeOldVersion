@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1515427B728BE0155F0F7A5A /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C35C9624CED31D15798742C /* Pods_SNSRealTimeAppOldVision.framework */; };
 		82086F091D1C7BC20032C25C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82086F081D1C7BC20032C25C /* DataService.swift */; };
 		82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230551D1C05460009C9C0 /* AppDelegate.swift */; };
 		82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305C1D1C05460009C9C0 /* Assets.xcassets */; };
@@ -27,11 +28,11 @@
 		82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D2308C1D1C5B540009C9C0 /* Bolts.framework */; };
 		82D4855E1D1D372600BBF28D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855D1D1D372600BBF28D /* FeedViewController.swift */; };
 		82D485601D1D38AC00BBF28D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D4855F1D1D38AC00BBF28D /* PostCell.swift */; };
-		AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNSRealTimeAppOldVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3289AA09D974B82CA73CD1C2 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
+		412B6B2DCA395E290057402E /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 		82086F081D1C7BC20032C25C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		82D230521D1C05460009C9C0 /* SNSRealTimeAppOldVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSRealTimeAppOldVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D230551D1C05460009C9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +56,7 @@
 		82D2308C1D1C5B540009C9C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		82D4855D1D1D372600BBF28D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		82D4855F1D1D38AC00BBF28D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.release.xcconfig"; sourceTree = "<group>"; };
-		D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
+		8C35C9624CED31D15798742C /* Pods_SNSRealTimeAppOldVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNSRealTimeAppOldVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF95B24B02E7C31C2915C8C /* libPods-SNSRealTimeAppOldVision.a in Frameworks */,
 				82D230891D1C5B3E0009C9C0 /* FBSDKCoreKit.framework in Frameworks */,
 				82D2308B1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework in Frameworks */,
 				82D2308D1D1C5B540009C9C0 /* Bolts.framework in Frameworks */,
+				1515427B728BE0155F0F7A5A /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +77,10 @@
 		1B5CA8ADE99955F03DAF86C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CC4F1A3D07AE0EFC5FFBE59 /* libPods-SNSRealTimeAppOldVision.a */,
 				82D2308C1D1C5B540009C9C0 /* Bolts.framework */,
 				82D2308A1D1C5B4A0009C9C0 /* FBSDKLoginKit.framework */,
 				82D230881D1C5B3E0009C9C0 /* FBSDKCoreKit.framework */,
+				8C35C9624CED31D15798742C /* Pods_SNSRealTimeAppOldVision.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 				82D2306D1D1C07220009C9C0 /* Podfile */,
 				82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */,
 				82D230531D1C05460009C9C0 /* Products */,
-				A38D59A780E766A286DE1BCE /* Pods */,
 				1B5CA8ADE99955F03DAF86C3 /* Frameworks */,
+				A9D37F2D05F2D38B230FF0CE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,11 +177,11 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		A38D59A780E766A286DE1BCE /* Pods */ = {
+		A9D37F2D05F2D38B230FF0CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */,
-				AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */,
+				412B6B2DCA395E290057402E /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */,
+				3289AA09D974B82CA73CD1C2 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 		};
 		82D230651D1C05460009C9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D46FD087643B151187748347 /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */;
+			baseConfigurationReference = 412B6B2DCA395E290057402E /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -444,7 +444,7 @@
 		};
 		82D230661D1C05460009C9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFE0823A9D0447118412C0B7 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */;
+			baseConfigurationReference = 3289AA09D974B82CA73CD1C2 /* Pods-SNSRealTimeAppOldVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

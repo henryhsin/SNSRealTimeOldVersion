@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class LoginViewController: UIViewController {
     var firebase = Firebase(url: "https://realtimeappoldvision.firebaseio.com")
