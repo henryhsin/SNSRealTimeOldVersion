@@ -10,6 +10,7 @@
 		1515427B728BE0155F0F7A5A /* Pods_SNSRealTimeAppOldVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C35C9624CED31D15798742C /* Pods_SNSRealTimeAppOldVision.framework */; };
 		82086F091D1C7BC20032C25C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82086F081D1C7BC20032C25C /* DataService.swift */; };
 		820F52191D275A04004667EA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F52181D275A04004667EA /* Post.swift */; };
+		824D2D7C1D39EC2600DFF060 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824D2D7B1D39EC2600DFF060 /* GoogleService-Info.plist */; };
 		82D230561D1C05460009C9C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D230551D1C05460009C9C0 /* AppDelegate.swift */; };
 		82D2305D1D1C05460009C9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305C1D1C05460009C9C0 /* Assets.xcassets */; };
 		82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		412B6B2DCA395E290057402E /* Pods-SNSRealTimeAppOldVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSRealTimeAppOldVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNSRealTimeAppOldVision/Pods-SNSRealTimeAppOldVision.debug.xcconfig"; sourceTree = "<group>"; };
 		82086F081D1C7BC20032C25C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		820F52181D275A04004667EA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		824D2D7B1D39EC2600DFF060 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82D230521D1C05460009C9C0 /* SNSRealTimeAppOldVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSRealTimeAppOldVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D230551D1C05460009C9C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D2305C1D1C05460009C9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		824D2D7D1D39F1C700DFF060 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				82D230611D1C05460009C9C0 /* Info.plist */,
+				824D2D7B1D39EC2600DFF060 /* GoogleService-Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
 		82D230491D1C05460009C9C0 = {
 			isa = PBXGroup;
 			children = (
@@ -128,14 +139,14 @@
 				82D230551D1C05460009C9C0 /* AppDelegate.swift */,
 				82D4855C1D1D36DD00BBF28D /* Controller */,
 				82086F071D1C7B880032C25C /* Services */,
-				82D230811D1C295B0009C9C0 /* Utility */,
+				82D230811D1C295B0009C9C0 /* Constants */,
 				82D230731D1C235C0009C9C0 /* Resources */,
 				82D2307E1D1C28950009C9C0 /* View Material */,
 				82D230691D1C05800009C9C0 /* Main.storyboard */,
 				820F52171D2759EB004667EA /* Model */,
 				82D2305E1D1C05460009C9C0 /* LaunchScreen.storyboard */,
-				82D230611D1C05460009C9C0 /* Info.plist */,
 				82D2306F1D1C0E480009C9C0 /* SNSRealTimeAppOldVision-Bridging-Header.h */,
+				824D2D7D1D39F1C700DFF060 /* Plist */,
 			);
 			path = SNSRealTimeAppOldVision;
 			sourceTree = "<group>";
@@ -160,12 +171,12 @@
 			name = "View Material";
 			sourceTree = "<group>";
 		};
-		82D230811D1C295B0009C9C0 /* Utility */ = {
+		82D230811D1C295B0009C9C0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				82D230821D1C29720009C9C0 /* Constants.swift */,
 			);
-			name = Utility;
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		82D4855B1D1D251C00BBF28D /* Custom Font */ = {
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D230791D1C23770009C9C0 /* NotoSans-BoldItalic.ttf in Resources */,
+				824D2D7C1D39EC2600DFF060 /* GoogleService-Info.plist in Resources */,
 				82D2306A1D1C05800009C9C0 /* Main.storyboard in Resources */,
 				82D230601D1C05460009C9C0 /* LaunchScreen.storyboard in Resources */,
 				82D2306E1D1C07220009C9C0 /* Podfile in Resources */,

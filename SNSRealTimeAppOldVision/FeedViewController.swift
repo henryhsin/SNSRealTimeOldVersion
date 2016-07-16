@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 
+
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     var imgPicker: UIImagePickerController!
+    var selectedImg: UIImage!
     
     var posts = [Post]()
     //everytime we want to display the view from the firebase, we can check was the img downloaded before in the cache? If yes, we can grab the img from the cache instead of downloading again from the Firebase
@@ -20,6 +22,46 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var cameraImg: UIImageView!
     
     @IBAction func postButton(sender: MaterialButton) {
+        if let txt = postField.text where postField.text != "" {
+            let checkCameraImg = UIImage(named: "SLR Camera-48")
+            print(selectedImg)
+            print("Q")
+            if let img = selectedImg where selectedImg != checkCameraImg{
+                //convert img to imgData and compress img from 0~1
+                let imgData = UIImageJPEGRepresentation(img, 0.2)
+                
+                //use current time to give the imgData an unique name
+                let imgPath = "\(NSDate.timeIntervalSinceReferenceDate())"
+                
+                let metadata = FIRStorageMetadata()
+                metadata.contentType = "image/jpg"
+                
+                DataService.ds.REF_IMAGES.child(imgPath).putData(imgData!, metadata: metadata, completion: { (storageMetadata, error) in
+                    
+                    //TODO: show loading indicator~~
+                    
+                    if error != nil{
+                        print(error)
+                    }else{
+                        if let meta = storageMetadata{
+                            if let imgLink = meta.downloadURL()?.absoluteString{
+                                print(imgLink)
+                                
+                            }
+                        }
+                    }
+                })
+                
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     @IBOutlet weak var postField: MaterialTextField!
@@ -42,7 +84,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.posts = []
             //因為是REF_POSTS
             //此處的snap是針對每個post，而非user
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot]{
                 for snap in snapshots{
                     //print("SNAP \(snap)")
                     
@@ -130,6 +172,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imgPicker.dismissViewControllerAnimated(true, completion: nil)
         cameraImg.image = image
+        selectedImg = image
     }
     
     

@@ -42,21 +42,26 @@ class LoginViewController: UIViewController {
     @IBAction func attemptEmailLoggedIn(sender: UIButton) {
         
         if let mail = emailTextField.text where mail != "", let password = passwordTextField.text where password != "" {
-            DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: { (error, authData) in
+           // DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: { (error, authData) in
+            
+            FIRAuth.auth()?.signInWithEmail(mail, password: password, completion: { (user, error) in
                 if error != nil{
                     
-                    if error.code == STATUS_ACCOUNT_NONEXIST{
-                        DataService.ds.REF_BASE.createUser(mail, password: password, withValueCompletionBlock: { (error, result ) in
+                    if error!.code == STATUS_ACCOUNT_NONEXIST{
+                        //DataService.ds.REF_BASE.createUser(mail, password: password, withValueCompletionBlock: { (error, result ) in
+                        
+                        FIRAuth.auth()?.createUserWithEmail(mail, password: password, completion: { (user, error) in
                             if error != nil{
                                 self.showAlertMessage(ALERT_TITLE_OOPS, message: "Problem creating account\(error)")
                             }else{
                                 
                                 
-                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
-                                DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: {(error, authData) in
-                                    let user = ["provider": authData.provider!, "userName":"Henry"]
-                                    DataService.ds.createFirebaseUser(authData.uid!, user: user)
-                                })
+                                NSUserDefaults.standardUserDefaults().setValue(user?.uid, forKey: KEY_UID)
+                                //DataService.ds.REF_BASE.authUser(mail, password: password, withCompletionBlock: {(error, authData) in
+                                    //let user = ["provider": authData.provider!, "userName":"Henry"]
+                                let userData = ["provider": "email"]
+                                DataService.ds.createFirebaseUser(user!.uid, user: userData)
+                                //})
                                 
                                 
                                 
@@ -65,7 +70,7 @@ class LoginViewController: UIViewController {
                         })
                         
                     }
-                    if error.code == STATUS_PASSWORD_WRONG{
+                    if error!.code == STATUS_PASSWORD_WRONG{
                         self.showAlertMessage(ALERT_TITLE_OOPS, message: "Your password is wrong!!")
                     }
 
@@ -102,18 +107,24 @@ class LoginViewController: UIViewController {
             }else{
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 
-                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                //DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                
+                //3.3firebase的版本的FB登入，需要先取得FB的access token
+                let FBCredential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                
+                FIRAuth.auth()?.signInWithCredential(FBCredential, completion: { (user, error ) in
+                
                     if error != nil{
                         self.showAlertMessage(ALERT_TITLE_OOPS, message: "Login Failed \(error)")
                     }else{
                         
                         //在這邊新增userID,username,provider到firebase中
                         //其中username,provider皆為userID的children
-                        let user = ["provider": authData.provider!, "userName":"Henry"]
-                        DataService.ds.createFirebaseUser(authData.uid!, user: user)
+                        let userData = ["provider": FBCredential.provider, "userName":"Henry"]
+                        DataService.ds.createFirebaseUser(user!.uid, user: userData)
                         
-                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                        self.FBShowAlert("Successful", message: "Login FB \(authData)")
+                        NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
+                        self.FBShowAlert("Successful", message: "Login FB \(user!)")
                        
                     }
                 })
