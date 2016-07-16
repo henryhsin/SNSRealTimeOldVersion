@@ -8,12 +8,14 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+
 
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     var imgPicker: UIImagePickerController!
-    var selectedImg: UIImage!
+    var selectedImg = false
     
     var posts = [Post]()
     //everytime we want to display the view from the firebase, we can check was the img downloaded before in the cache? If yes, we can grab the img from the cache instead of downloading again from the Firebase
@@ -26,7 +28,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let checkCameraImg = UIImage(named: "SLR Camera-48")
             print(selectedImg)
             print("Q")
-            if let img = selectedImg where selectedImg != checkCameraImg{
+            if let img = cameraImg.image where selectedImg == true{
                 //convert img to imgData and compress img from 0~1
                 let imgData = UIImageJPEGRepresentation(img, 0.2)
                 
@@ -46,23 +48,60 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         if let meta = storageMetadata{
                             if let imgLink = meta.downloadURL()?.absoluteString{
                                 print(imgLink)
-                                
+                                self.postToFirebase(imgLink)
+                                print("QQ")
+
                             }
                         }
                     }
                 })
                 
+            }else{
+                //we wont to post the img, so we create a function that just post text
+                self.postToFirebase(nil)
             }
         }
+    }
+    
+    
+    //這個function會將postDescription, likes, hates, imgUrl  上傳到Firebase
+    func postToFirebase(imgUrl: String?){
+        //這邊需要去參考Firebase中的database的資料結構，裡面的節點都需與database中的一致
+        var posts: Dictionary<String, AnyObject> = [
+            "description": postField.text!,
+            "hates": 0,
+            "likes": 0
+        ]
+        
+        //如果有imgUrl，則在posts中新增一個key: "imgUrl",且其value: imgUrl
+        if imgUrl != nil{
+            posts["imgUrl"] = imgUrl!
+            print(posts)
+            print("QQ")
+        }
+        
+        //在database中新增一個針對此貼文(post)的子節點
+        //下面這行程式碼可以自動為此po文創建一個unique ID
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        //在這個新創的po文子節點下，將posts新增進去
+        firebasePost.updateChildValues(posts)
         
         
+        //上傳完po文後，將postField中的字清空, cameraImg改回初始的相機圖案 selectedImg設為false
         
+        print(self.postField.text)
+        self.postField.text = ""
         
+        cameraImg.image = UIImage(named: "SLR Camera-48")
+        selectedImg = false
         
-        
+        //最後再讓tableView reloadData
+        tableView.reloadData()
         
         
     }
+    
+    
     
     @IBOutlet weak var postField: MaterialTextField!
     @IBOutlet weak var tableView: UITableView!
@@ -172,7 +211,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imgPicker.dismissViewControllerAnimated(true, completion: nil)
         cameraImg.image = image
-        selectedImg = image
+        selectedImg = true
     }
     
     

@@ -51,7 +51,7 @@ class PostCell: UITableViewCell {
                 //要記得因為apple還未預設開放連結到非https的網址，所以記得要去info.plist設定
                 request = Alamofire.request(.GET, url).validate(contentType: ["image/*"]).response(completionHandler: { (request, response, data, err) in
                     if err != nil{
-                        print(err)
+                        print(err.debugDescription)
                     }else{
                         
                         let img = UIImage(data: data!)!

@@ -119,6 +119,7 @@
 			children = (
 				82D2306D1D1C07220009C9C0 /* Podfile */,
 				82D230541D1C05460009C9C0 /* SNSRealTimeAppOldVision */,
+				82D230731D1C235C0009C9C0 /* Resources */,
 				82D230531D1C05460009C9C0 /* Products */,
 				1B5CA8ADE99955F03DAF86C3 /* Frameworks */,
 				A9D37F2D05F2D38B230FF0CE /* Pods */,
@@ -140,7 +141,6 @@
 				82D4855C1D1D36DD00BBF28D /* Controller */,
 				82086F071D1C7B880032C25C /* Services */,
 				82D230811D1C295B0009C9C0 /* Constants */,
-				82D230731D1C235C0009C9C0 /* Resources */,
 				82D2307E1D1C28950009C9C0 /* View Material */,
 				82D230691D1C05800009C9C0 /* Main.storyboard */,
 				820F52171D2759EB004667EA /* Model */,
@@ -158,6 +158,7 @@
 				82D2305C1D1C05460009C9C0 /* Assets.xcassets */,
 			);
 			name = Resources;
+			path = SNSRealTimeAppOldVision;
 			sourceTree = "<group>";
 		};
 		82D2307E1D1C28950009C9C0 /* View Material */ = {
